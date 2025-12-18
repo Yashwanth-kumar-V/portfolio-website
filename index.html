@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashwanth Kumar - Creative Technologist</title>
+     
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            overflow-x: hidden;
+        }
+
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.3;
+        }
+
+        .section-title {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .section-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition-delay: 0.2s;
+        }
+
+        .is-visible .section-title,
+        .is-visible .section-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-card, .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover, .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glow-effect {
+            position: absolute;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            width: 800px;
+            height: 800px;
+            border-radius: 9999px;
+            background: radial-gradient(circle at center, rgba(45, 128, 255, 0.15) 0%, rgba(45, 128, 255, 0) 60%);
+            transform: translate(-50%, -50%);
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Background 3D Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Mouse Follow Glow Effect -->
+    <div class="glow-effect"></div>
+
+    <!-- Main Container -->
+    <div class="relative z-10 mx-auto max-w-5xl px-6">
+
+        <!-- Header -->
+        <header class="py-8 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">YK.</a>
+            <nav>
+                <a href="#contact" class="px-4 py-2 text-sm font-medium rounded-md bg-white/10 hover:bg-white/20 transition-colors">Contact Me</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center md:text-left gap-12 md:gap-16">
+            <!-- Text Content -->
+            <div class="max-w-xl">
+                <h2 class="text-2xl font-semibold text-gray-300 mb-2">Yashwanth Kumar V</h2>
+                <p class="text-lg text-blue-400 mb-4">Engineering Student</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 leading-tight">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-gray-500">Creative Technologist</span><br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">and Programmer</span>
+                </h1>
+                <p class="text-lg text-gray-400 mb-8">
+                    Building the Logic Behind the Look
+                </p>
+                <a href="#about" class="px-6 py-3 text-base font-semibold rounded-lg bg-blue-600 hover:bg-blue-700 transition-transform hover:scale-105 shadow-lg shadow-blue-600/30">
+                    Learn More
+                </a>
+            </div>
+             <!-- Image Frame -->
+            <div class="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+                 <div class="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full blur-xl opacity-70"></div>
+                 <div class="relative w-full h-full p-2 bg-gray-900 rounded-full">
+                    <img src="IMG_20250819_125225.jpg" alt="Yashwanth Kumar" class="rounded-full w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 animated-section">
+            <h2 class="section-title text-4xl font-bold tracking-tighter text-center mb-4">What I Do Best</h2>
+            <p class="section-title text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
+I build complete digital experiences, from initial concept to final execution. My expertise lies in engineering an application's core logic with clean, efficient code in C, Python, and Java, while also designing the visual user experience through mockups and prototypes in Photoshop and Canva.            </p>
+            
+            <div class="section-content grid md:grid-cols-2 gap-8">
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h3 class="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400">Software & Back-End</h3>
+                    <p class="text-gray-400">
+                        I build the core logic of applications with a focus on clean, efficient, and scalable code to solve complex problems.
+                    </p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                    <h3 class="text-2xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-400">Visual & UI Design</h3>
+                    <p class="text-gray-400">
+                        I visualize the user experience, creating mockups, prototypes, and assets that serve as the blueprint for development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 animated-section">
+            <h2 class="section-title text-4xl font-bold tracking-tighter text-center mb-12">My Toolkit</h2>
+            <div class="section-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+                <!-- Skill cards -->
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="C_Programming_Language.svg.png" alt="C Icon" class="h-14 w-12 mb-3">
+                    <h4 class="font-semibold">C</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                <img src="python1.png" alt="Python Icon" class="h-12 w-12 mb-3">
+                <h4 class="font-semibold">Python</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="java-4-logo.png" alt="Java Icon" class="h-12 w-17 mb-3">
+                    <h4 class="font-semibold">Java</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="HTML5_logo_and_wordmark.svg.png" alt="HTML Icon" class="h-12 w-15 mb-3">
+                    <h4 class="font-semibold">HTML</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="CSS3_logo_and_wordmark.svg" alt="CSS Icon" class="h-12 w-12 mb-3">
+                    <h4 class="font-semibold">CSS</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="JavaScript-logo.png" alt="JavaScript Icon" class="h-12 w-12 mb-3">
+                    <h4 class="font-semibold">JavaScript</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop Icon" class="h-12 w-12 mb-3">
+                    <h4 class="font-semibold">Photoshop</h4>
+                </div>
+                <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="Canva.png" alt="Canva Icon" class="h-12 w-20 mb-3">
+                    <h4 class="font-semibold">Canva</h4>
+                </div>
+                 <div class="skill-card bg-white/5 p-6 rounded-2xl border border-white/10 flex flex-col items-center justify-center aspect-square">
+                    <img src="maya-2017-logo-png-transparent.png" alt="Maya Icon" class="h-12 w-12 mb-3">
+                    <h4 class="font-semibold">Maya</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 animated-section">
+            <h2 class="section-title text-4xl font-bold tracking-tighter text-center mb-12">My Projects</h2>
+            <div class="section-content grid md:grid-cols-3 gap-8">
+                <!-- Project cards -->
+                <a href="https://github.com/Yashwanth-kumar-V/Digital-Prescription-Drug-Interaction-Checker/tree/master" target="_blank" class="project-card block bg-white/5 rounded-2xl border border-white/10 overflow-hidden group">
+                    <img src="portal.png" alt="Project One" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Digital-Prescription-Drug-Interaction-Checker</h3>
+                        <p class="text-gray-400 mb-4">The Digital Prescription & Drug Interaction Checker uses JavaFX and Oracle SQL to provide real-time alerts,cross-referencing prescriptions against a database to prevent harmful interactions and ensure patient safety.</p>
+                        <span class="text-sm font-medium text-blue-400">Java &bull; Javafx &bull; Oracle 21c</span>
+                    </div>
+                </a>
+                <a href="https://yashwanth-kumar-v.github.io/react-translator-app/" target="_blank" class="project-card block bg-white/5 rounded-2xl border border-white/10 overflow-hidden group">
+                    <img src="Translator.jpg" alt="Project Two" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Reat Translator</h3>
+                        <p class="text-gray-400 mb-4">I built a Text Translator using React, Tailwind CSS, and RapidAPI. It features real-time English-to-multi-language conversion with a clean, responsive UI. A great project for mastering API integration!.</p>
+                        <span class="text-sm font-medium text-purple-400">React Vite(Build tools) &bull; RapidAPT &bull; tailwindcss</span>
+                    </div>
+                </a>
+                <a href="https://yashwanth-kumar-v.github.io/random-string-generator/" target="_blank" class="project-card block bg-white/5 rounded-2xl border border-white/10 overflow-hidden group">
+                    <img src="Random string generator.jpg" alt="Project One" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Random String Generator</h3>
+                        <p class="text-gray-400 mb-4">Generate secure, customizable random strings instantly. Adjust length, include numbers or symbols, and copy to your clipboard with one click. A fast, React-powered tool with a sleek, modern interface.</p>
+                        <span class="text-sm font-medium text-blue-400">React Vite(Build tools) &bull; npm &bull; tailwindcss</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 animated-section">
+            <h2 class="section-title text-4xl font-bold tracking-tighter text-center mb-4">Let's Connect</h2>
+            <p class="section-title text-lg text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                Have a project in mind or just want to say hi? Feel free to reach out. I'm always open to new opportunities and collaborations.
+            </p>
+            <div class="section-content text-center">
+                <a href="mailto:your.email@example.com" class="inline-block px-8 py-4 text-lg font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 transition-all transform hover:scale-105 shadow-lg shadow-purple-600/30">
+                    yashwanthkumarprof@gmail.com
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 text-center text-gray-500">
+            <p>&copy; 2025 Yashwanth Kumar. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Main JavaScript Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- 3D Background Animation ---
+            let scene, camera, renderer, particles;
+            const mouse = new THREE.Vector2();
+
+            function init3D() {
+                scene = new THREE.Scene();
+                camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                camera.position.z = 50;
+
+                renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('bg-canvas'), alpha: true });
+                renderer.setSize(window.innerWidth, window.innerHeight);
+
+                const particleCount = 5000;
+                const geometry = new THREE.BufferGeometry();
+                const positions = new Float32Array(particleCount * 3);
+
+                for (let i = 0; i < particleCount * 3; i++) {
+                    positions[i] = (Math.random() - 0.5) * 200;
+                }
+                geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+                
+                const material = new THREE.PointsMaterial({
+                    color: 0x60a5fa, // blue-400
+                    size: 0.2,
+                    transparent: true,
+                    opacity: 0.7
+                });
+
+                particles = new THREE.Points(geometry, material);
+                scene.add(particles);
+
+                animate();
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                particles.rotation.x += 0.0001;
+                particles.rotation.y += 0.0002;
+                
+                // Animate particles based on mouse position
+                if (particles) {
+                    camera.position.x += (mouse.x * 10 - camera.position.x) * 0.02;
+                    camera.position.y += (-mouse.y * 10 - camera.position.y) * 0.02;
+                    camera.lookAt(scene.position);
+                }
+
+                renderer.render(scene, camera);
+            }
+
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            }
+            
+            function onMouseMove(event) {
+                mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+                mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+            }
+
+
+            window.addEventListener('resize', onWindowResize, false);
+            window.addEventListener('mousemove', onMouseMove, false);
+            
+            init3D();
+
+
+            // --- Scroll Animations ---
+            const animatedSections = document.querySelectorAll('.animated-section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedSections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Mouse Glow Effect ---
+            const glow = document.querySelector('.glow-effect');
+            if (glow) {
+                window.addEventListener('mousemove', (e) => {
+                    glow.style.left = `${e.clientX}px`;
+                    glow.style.top = `${e.clientY}px`;
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,19 @@
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#digital-clock {
+    font-size: 5rem;
+    color: #00ff00; /* Classic green digital color */
+    background-color: #000000;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff00;
+    text-align: center;
+}
